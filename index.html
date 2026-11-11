@@ -3,234 +3,121 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>CS STEM Wall | Share Your Ideas</title>
+<title>CS STEM WALL</title>
 
 <style>
-
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
     background: #030817;
     color: white;
-    min-height: 100vh;
-    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    padding: 20px;
 }
-
-/* Background */
-
-body::before {
-    content: "";
-    position: fixed;
-    width: 500px;
-    height: 500px;
-    background: #006aff;
-    filter: blur(180px);
-    opacity: 0.18;
-    top: -150px;
-    left: -100px;
-    z-index: -1;
-}
-
-body::after {
-    content: "";
-    position: fixed;
-    width: 450px;
-    height: 450px;
-    background: #00d9ff;
-    filter: blur(180px);
-    opacity: 0.12;
-    bottom: -150px;
-    right: -100px;
-    z-index: -1;
-}
-
-/* Header */
 
 header {
     text-align: center;
-    padding: 45px 15px 20px;
-}
-
-.badge {
-    display: inline-block;
-    border: 1px solid #00cfff;
-    color: #00d9ff;
-    padding: 8px 18px;
-    border-radius: 30px;
-    font-size: 12px;
-    letter-spacing: 3px;
-    margin-bottom: 22px;
+    padding: 35px 10px;
 }
 
 header h1 {
-    font-size: clamp(38px, 7vw, 72px);
-    font-weight: 900;
-    letter-spacing: 3px;
-    color: white;
-    text-shadow: 0 0 25px #008cff;
-}
-
-header h1 span {
+    font-size: 48px;
     color: #00d9ff;
+    text-shadow: 0 0 20px #008cff;
 }
 
 header p {
-    color: #a9c8e9;
-    margin-top: 15px;
-    font-size: 16px;
+    color: #b9d8ee;
+    margin-top: 12px;
 }
-
-/* Main container */
 
 .container {
-    width: 90%;
-    max-width: 850px;
-    margin: 35px auto;
-    padding: 35px;
-    background: rgba(10, 25, 52, 0.85);
-    border: 1px solid rgba(0, 200, 255, 0.35);
-    border-radius: 25px;
-    box-shadow: 0 0 40px rgba(0, 130, 255, 0.12);
+    max-width: 750px;
+    margin: 20px auto;
+    padding: 30px;
+    background: #0b1930;
+    border: 1px solid #00bfff;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #004b80;
 }
 
-/* Introduction */
+h2 {
+    text-align: center;
+    color: #00d9ff;
+    margin-bottom: 15px;
+}
 
 .intro {
     text-align: center;
-    margin-bottom: 30px;
+    line-height: 1.7;
+    color: #c6d9ed;
+    margin-bottom: 25px;
 }
-
-.intro h2 {
-    color: #00d9ff;
-    font-size: 25px;
-    margin-bottom: 12px;
-}
-
-.intro p {
-    color: #b9c9dc;
-    line-height: 1.8;
-    font-size: 15px;
-}
-
-/* Example */
 
 .example {
-    background: rgba(0, 150, 255, 0.09);
-    border-left: 4px solid #00d9ff;
+    background: #102a49;
     padding: 18px;
+    border-left: 4px solid #00d9ff;
     border-radius: 10px;
-    margin-bottom: 30px;
-    line-height: 1.7;
+    margin-bottom: 25px;
+    line-height: 1.6;
 }
-
-.example strong {
-    color: #00d9ff;
-}
-
-/* Form */
 
 label {
     display: block;
-    font-size: 17px;
+    margin: 15px 0 10px;
     font-weight: bold;
-    margin-bottom: 12px;
-    color: #eaf7ff;
 }
 
 .optional {
     color: #00d9ff;
     font-size: 13px;
-    font-weight: normal;
 }
 
 textarea {
     width: 100%;
-    min-height: 145px;
-    padding: 18px;
-    border: 1px solid #245b83;
-    border-radius: 14px;
-    background: #07152b;
+    min-height: 140px;
+    padding: 15px;
+    background: #061225;
     color: white;
+    border: 1px solid #1679a8;
+    border-radius: 12px;
     font-size: 15px;
-    outline: none;
+    font-family: Arial;
     resize: vertical;
-    transition: 0.3s;
-    margin-bottom: 25px;
-    font-family: inherit;
 }
 
 textarea:focus {
+    outline: none;
     border-color: #00d9ff;
-    box-shadow: 0 0 18px rgba(0, 217, 255, 0.25);
+    box-shadow: 0 0 12px #007bff;
 }
-
-textarea::placeholder {
-    color: #7189a6;
-}
-
-/* Button */
 
 button {
     width: 100%;
+    margin-top: 25px;
     padding: 17px;
-    background: linear-gradient(90deg, #007bff, #00d9ff);
+    background: linear-gradient(90deg,#007bff,#00d9ff);
     border: none;
-    border-radius: 13px;
-    color: #00101e;
+    border-radius: 12px;
     font-size: 17px;
-    font-weight: 900;
-    letter-spacing: 2px;
+    font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
+    color: #00101e;
 }
 
 button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 30px #00aaff;
+    box-shadow: 0 0 20px #00d9ff;
 }
 
-button:disabled {
-    opacity: 0.6;
-    cursor: wait;
-}
-
-/* Bottom */
-
-.bottom {
+footer {
     text-align: center;
-    padding: 20px;
     color: #829db9;
-    font-size: 13px;
-    line-height: 2;
-}
-
-.bottom strong {
-    color: #00d9ff;
-}
-
-/* Responsive */
-
-@media(max-width:600px) {
-
-    .container {
-        padding: 22px;
-        width: 94%;
-    }
-
-    header {
-        padding-top: 30px;
-    }
-
-    header h1 {
-        letter-spacing: 1px;
-    }
-
+    margin: 30px 0;
 }
 
 </style>
@@ -239,106 +126,68 @@ button:disabled {
 <body>
 
 <header>
-
-    <div class="badge">IDEAS • INNOVATION • TECHNOLOGY</div>
-
-    <h1>CS STEM <span>WALL</span></h1>
-
-    <p>Think Beyond. Identify Problems. Create Solutions.</p>
-
+    <h1>CS STEM WALL</h1>
+    <p>THINK • SHARE • INNOVATE</p>
 </header>
-
 
 <div class="container">
 
-    <div class="intro">
+    <h2>YOUR VOICE MATTERS!</h2>
 
-        <h2>YOUR VOICE MATTERS!</h2>
-
-        <p>
-        Every great innovation begins with a problem.
-        Tell us about real-time problems you experience
+    <p class="intro">
+        Identify real-time problems you face or observe
         in our school that do not have a proper solution.
         Your idea could become the next big innovation!
-        </p>
-
-    </div>
-
+    </p>
 
     <div class="example">
-
-        <strong>EXAMPLE:</strong><br>
-
-        There is no proper map or direction board in our
-        school. When parents or visitors arrive, they
-        find it difficult to locate the STEM Lab and
-        other laboratories.
-
+        <b style="color:#00d9ff;">EXAMPLE:</b><br>
+        There is no proper map in our school.
+        Parents and visitors find it difficult to locate
+        the STEM Lab and other laboratories.
     </div>
 
+    <form action="https://formsubmit.co/tamscserd@gmail.com"
+          method="POST">
 
-    <form id="ideaForm"
-    action="https://formsubmit.co/tamscserd@gmail.com"
-    method="POST">
+        <input type="hidden" name="_subject"
+        value="New CS STEM Wall Submission">
 
-        <label>
-            01. What is the problem you face in school?
-        </label>
+        <input type="hidden" name="_captcha"
+        value="false">
+
+        <input type="hidden" name="_template"
+        value="table">
+
+        <label>01. Describe the problem you face in school:</label>
 
         <textarea
         name="School Problem"
-        placeholder="Describe a real-time problem you have noticed in our school..."
+        placeholder="Describe the real-time problem..."
         required></textarea>
 
-
         <label>
-            02. Your suggested solution
-            <span class="optional">(Optional)</span>
+        02. Suggest a possible solution
+        <span class="optional">(Optional)</span>
         </label>
 
         <textarea
         name="Suggested Solution"
-        placeholder="How do you think this problem could be solved? (If you have an idea...)"
+        placeholder="How can this problem be solved?"
         ></textarea>
 
-
-        <button type="submit" id="submitBtn">
-            SUBMIT YOUR IDEA →
+        <button type="submit">
+        SUBMIT YOUR IDEA →
         </button>
 
     </form>
 
 </div>
 
-
-<div class="bottom">
-
-    <strong>CS STEM WALL</strong><br>
-
-    Every problem is an opportunity for innovation.<br>
-
+<footer>
+    <b style="color:#00d9ff;">CS STEM WALL</b><br>
     Let's build a smarter school together!
-
-</div>
-
-
-<script>
-
-const form = document.getElementById("ideaForm");
-const button = document.getElementById("submitBtn");
-
-form.addEventListener("submit", function(event) {
-
-    if (!form.checkValidity()) {
-        return;
-    }
-
-    button.disabled = true;
-    button.innerText = "SUBMITTING...";
-
-});
-
-</script>
+</footer>
 
 </body>
 </html>
