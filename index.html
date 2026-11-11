@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CS STEM Wall | Share Your Ideas</title>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #030817;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Background */
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background: #006aff;
+    filter: blur(180px);
+    opacity: 0.18;
+    top: -150px;
+    left: -100px;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 450px;
+    height: 450px;
+    background: #00d9ff;
+    filter: blur(180px);
+    opacity: 0.12;
+    bottom: -150px;
+    right: -100px;
+    z-index: -1;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    padding: 45px 15px 20px;
+}
+
+.badge {
+    display: inline-block;
+    border: 1px solid #00cfff;
+    color: #00d9ff;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
+
+header h1 {
+    font-size: clamp(38px, 7vw, 72px);
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: white;
+    text-shadow: 0 0 25px #008cff;
+}
+
+header h1 span {
+    color: #00d9ff;
+}
+
+header p {
+    color: #a9c8e9;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+/* Main container */
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 35px;
+    background: rgba(10, 25, 52, 0.85);
+    border: 1px solid rgba(0, 200, 255, 0.35);
+    border-radius: 25px;
+    box-shadow: 0 0 40px rgba(0, 130, 255, 0.12);
+}
+
+/* Introduction */
+
+.intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.intro h2 {
+    color: #00d9ff;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.intro p {
+    color: #b9c9dc;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* Example */
+
+.example {
+    background: rgba(0, 150, 255, 0.09);
+    border-left: 4px solid #00d9ff;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.example strong {
+    color: #00d9ff;
+}
+
+/* Form */
+
+label {
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #eaf7ff;
+}
+
+.optional {
+    color: #00d9ff;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+textarea {
+    width: 100%;
+    min-height: 145px;
+    padding: 18px;
+    border: 1px solid #245b83;
+    border-radius: 14px;
+    background: #07152b;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    resize: vertical;
+    transition: 0.3s;
+    margin-bottom: 25px;
+    font-family: inherit;
+}
+
+textarea:focus {
+    border-color: #00d9ff;
+    box-shadow: 0 0 18px rgba(0, 217, 255, 0.25);
+}
+
+textarea::placeholder {
+    color: #7189a6;
+}
+
+/* Button */
+
+button {
+    width: 100%;
+    padding: 17px;
+    background: linear-gradient(90deg, #007bff, #00d9ff);
+    border: none;
+    border-radius: 13px;
+    color: #00101e;
+    font-size: 17px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 30px #00aaff;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+/* Bottom */
+
+.bottom {
+    text-align: center;
+    padding: 20px;
+    color: #829db9;
+    font-size: 13px;
+    line-height: 2;
+}
+
+.bottom strong {
+    color: #00d9ff;
+}
+
+/* Responsive */
+
+@media(max-width:600px) {
+
+    .container {
+        padding: 22px;
+        width: 94%;
+    }
+
+    header {
+        padding-top: 30px;
+    }
+
+    header h1 {
+        letter-spacing: 1px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="badge">IDEAS • INNOVATION • TECHNOLOGY</div>
+
+    <h1>CS STEM <span>WALL</span></h1>
+
+    <p>Think Beyond. Identify Problems. Create Solutions.</p>
+
+</header>
+
+
+<div class="container">
+
+    <div class="intro">
+
+        <h2>YOUR VOICE MATTERS!</h2>
+
+        <p>
+        Every great innovation begins with a problem.
+        Tell us about real-time problems you experience
+        in our school that do not have a proper solution.
+        Your idea could become the next big innovation!
+        </p>
+
+    </div>
+
+
+    <div class="example">
+
+        <strong>EXAMPLE:</strong><br>
+
+        There is no proper map or direction board in our
+        school. When parents or visitors arrive, they
+        find it difficult to locate the STEM Lab and
+        other laboratories.
+
+    </div>
+
+
+    <form id="ideaForm"
+    action="https://formsubmit.co/tamscserd@gmail.com"
+    method="POST">
+
+        <label>
+            01. What is the problem you face in school?
+        </label>
+
+        <textarea
+        name="School Problem"
+        placeholder="Describe a real-time problem you have noticed in our school..."
+        required></textarea>
+
+
+        <label>
+            02. Your suggested solution
+            <span class="optional">(Optional)</span>
+        </label>
+
+        <textarea
+        name="Suggested Solution"
+        placeholder="How do you think this problem could be solved? (If you have an idea...)"
+        ></textarea>
+
+
+        <button type="submit" id="submitBtn">
+            SUBMIT YOUR IDEA →
+        </button>
+
+    </form>
+
+</div>
+
+
+<div class="bottom">
+
+    <strong>CS STEM WALL</strong><br>
+
+    Every problem is an opportunity for innovation.<br>
+
+    Let's build a smarter school together!
+
+</div>
+
+
+<script>
+
+const form = document.getElementById("ideaForm");
+const button = document.getElementById("submitBtn");
+
+form.addEventListener("submit", function(event) {
+
+    if (!form.checkValidity()) {
+        return;
+    }
+
+    button.disabled = true;
+    button.innerText = "SUBMITTING...";
+
+});
+
+</script>
+
+</body>
+</html>
